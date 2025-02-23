@@ -1,7 +1,11 @@
+import MovieInput from "./components/MovieInput";
+import MovieList from "./components/MovieList";
+
 function App() {
 	return (
 		<>
-			<h1>Hey Babe</h1>
+			<MovieInput />
+			<MovieList />
 		</>
 	);
 }
