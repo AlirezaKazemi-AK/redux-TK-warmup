@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { removeMovie } from "../movieSlice";
+import { RootState } from "../store";
 
 const MovieList = () => {
 	const dispatch = useDispatch();
 	const movies = useSelector(
-		(state: { movies: { movies: any[] } }) => state.movies.movies
+		(state: RootState) =>
+			state.movies.movies
 	);
 	const handleRemove = (id: number) => {
 		dispatch(removeMovie(id));
